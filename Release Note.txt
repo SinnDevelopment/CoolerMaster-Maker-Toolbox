@@ -1,0 +1,65 @@
+CoolerMaster SDK  (PS:FN+ F1可以切換白光鍵盤燈光開關)
+2016/9/20
+1. 增加CoolerMaster Mouse Pro L相關功能
+2. 增加x64 DLL與exe
+
+2016/07/27
+1.修正L 白光(193) PID 誤設成bootloader值導致無法設定的問題
+2.修正L& M 白光 呼吸特效無法切換問題
+
+2016/06/24
+1. 將SetFullLedColor & SetAllLedColor & SetLedColor 的等待FW回應時間縮短為11 MS
+   減少誤判Cmd 發送失敗機率
+
+2016/06/23
+1. 將Key Matrix從 1改為 0開始
+2. 變更EU Layout 的 CODE42  KeyMatrix位置
+3. 將SetFullLedColor & SetAllLedColor & SetLedColor 的等待FW回應時間縮短為5 MS
+   避免FW 沒回應時導致程序停頓
+4. 增加DEV_MKeys_M_White & DEV_MKeys_L_White 兩個裝置的設定功能
+5. 提供測試Cmd 速度的ColorChange.exe 增加選擇裝置的功能
+
+2016/06/19
+1. 修正取得FW 訊號時的延遲時間判斷式
+
+2016/06/1
+1.修正快速按Key時，因多執行續導致KeyEvtList讀取時錯誤造成Crash的問題
+2.修正當無音效裝置(喇叭)時會連續彈出警告視窗的問題
+
+2016/04/23
+1.新增EnableKeyInterrupt與SetKeyCallBack 設定按鍵回呼功能的相關函式
+2.範例增加Key Effect, 勾選後按下該Key後會將其按鍵自動設為紅色，放開時滅掉
+
+2016/04/17
+1.修正拼字錯誤LAYOUT_KEYOBARD 應改成 LAYOUT_KEYBOARD
+2.修正CoolerMaster LED Table.xls 中 EU Layout CODE42 位置標示錯誤
+   CODE42 應在 (4, 15) 而非 (4, 13)
+3. 新增Cmd: RefreshLed
+4. SetFullLedColor & SetAllLedColor 移除預設呼叫RefreshLed的 Cmd
+5. 縮短讀取FW Respond的Delay時間，以加速cmd速度
+
+
+2016/03/22
+1.修正GetDeviceLayout、EnableLedControl函式說明
+2.取消Cmd的預設Delay
+3.增加滑鼠的LED點燈表(XLS)及特效列舉(SDK.h)
+
+2016/03/20
+1.修正函式名稱SetControlDevice (補上e)
+2.增加GetDeviceLayout 函式用來確定鍵盤Layout
+3.增加EU 鍵盤LED矩陣表
+4.範例增加取得Layout的按鈕
+
+2016/03/17
+1.新增設定控制裝置函式SetControlDevic
+2.新增MasterKey S 裝置控制，並增加其LED Table
+3.Device List 目前尚未實作滑鼠，待滑鼠完工後增加
+
+2016/01/31 (x86 DLL)
+1.增加整把鍵盤變更(同一)顏色的Cmd
+2.增加簡易的範例說明
+
+2016/01/27 (x86 DLL)
+1.提供系統資訊 Time /CPU / RAM / Volume
+2.提供變更當前特效的函式
+3.提供設定 單顆/整盤 LED函式
